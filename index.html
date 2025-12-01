@@ -34,23 +34,23 @@
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+            gap: 25px;
+            align-items: start;
         }
 
         .skill-category {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: flex-start;
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 1px 4px rgb(243, 239, 239);
+            min-height: 160px; /* hace que todos los cuadros midan parecido */
         }
 
         .skill-category h3 {
             width: 100%;
             margin-bottom: 10px;
         }
-
-
         .skill-tag { 
             background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%); 
             color: white; 
@@ -84,13 +84,11 @@
             <p>Welcome to My_Page</p>
         </header>
 
-        <!-- ABOUT ME -->
         <section class="card">
             <h2>About me</h2>
             <p>I’ve always been in love with sports, especially motor sports and cars. I look forward to finding a workplace where I can show my skills and help however I can.</p>
         </section>
 
-        <!-- SKILLS with categories -->
         <section class="card">
             <h2>Skills</h2>
             <div class="skills-grid">
@@ -133,7 +131,6 @@
             </div>
         </section>
 
-        <!-- EXPERIENCE -->
         <section class="card">
             <h2>Experience</h2>
             <article>
@@ -173,7 +170,6 @@
             </article>
         </section>
 
-        <!-- EDUCATION -->
         <section class="card">
             <h2>Education</h2>
             <article>
@@ -202,7 +198,6 @@
             </article>
         </section>
 
-        <!-- CONTACT -->
         <section class="card">
             <h2>Contact</h2>
             <div class="contact">
