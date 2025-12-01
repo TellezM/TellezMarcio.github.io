@@ -134,7 +134,7 @@
         }
 
         .about-card {
-            width: 65%;            
+            width: 70%;            
             text-align: left;
         }
 
@@ -144,6 +144,33 @@
             object-fit: cover;
             border-radius: 50%;  
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .about-tag {
+            background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%); /* mismo gradiente */
+            color: white;
+            display: inline-block;
+            padding: 12px 18px;    
+            border-radius: 20px;      
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            max-width: 760px;        
+            margin-top: 12px;     
+        }
+
+        .about-tag p {
+            margin: 0;
+            line-height: 1.4;
+            font-size: 15px;
+            text-align: left;        
+        }
+
+        @media (max-width: 600px) {
+            .about-tag {
+                display: block;
+                width: 100%;
+                padding: 10px 14px;
+                border-radius: 12px;
+            }
+            .about-tag p { font-size: 14px; }
         }
 
 
@@ -159,11 +186,15 @@
         <div class="about-wrapper">
             <section class="card about-card">
                 <h2>About me</h2>
-                <p>Passionate about applying Data Science to real-world challenges, 
-                    especially in high-performance environments. 
-                    I’m driven to turn data into insights that improve decision-making, 
-                    efficiency, and results. Looking forward to contributing my analytical skills wherever I can add value.
-                </section>
+                <div class="about-tag">
+                    <p>Passionate about using Data Science to solve real-world challenges, 
+                        especially in sports and high-performance environments. 
+                        I love turning data into insights that improve strategy, 
+                        efficiency, and results. Always excited to contribute my analytical 
+                        skills wherever they can make an impact.
+                    </p>
+                </div>
+            </section>
             <img class="about-photo" src="MarcioT.jpg" alt="Profile Photo">
         </div>
 
