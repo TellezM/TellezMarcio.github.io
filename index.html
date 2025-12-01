@@ -32,11 +32,11 @@
         }
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, max-content));
             gap: 25px;
             justify-content: center;
-            justify-items: center;
         }
+
         .skills-grid > * {
             width: 100%;
             max-width: 260px; /* Hace que cada card tenga tamaño fijo */
