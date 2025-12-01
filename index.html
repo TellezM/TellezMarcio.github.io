@@ -125,29 +125,27 @@
             opacity: 0.9;
             font-size: 15px;
         }
-        .about-card {
-            width: 50%;  
-            margin-left: 0;    
-            margin-right: auto; 
-            text-align: left;   
-        }
-        .about-content {
+        .about-wrapper {
             display: flex;
-            align-items: center;     
-            gap: 20px;         
+            align-items: center;   /* centra verticalmente */
+            gap: 30px;             /* separación entre card y foto */
+            width: 100%;
+            justify-content: flex-start;
         }
 
-        .about-text {
-            flex: 1;           
+        .about-card {
+            width: 50%;            /* card ocupa la mitad izquierda */
+            text-align: left;
         }
 
-        .about-photo img {
-            width: 150px;      
-            height: 150px;
+        .about-photo {
+            width: 180px;          /* ajusta el tamaño */
+            height: 180px;
             object-fit: cover;
-            border-radius: 50%;       
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 50%;    /* foto redonda */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
+
 
     </style>
 </head>
@@ -158,19 +156,14 @@
             <p>Welcome to My_Page</p>
         </header>
 
-        <section class="card about-card">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About me</h2>
-                    <p>I’ve always been in love with sports, especially motor sports and cars. 
-                    I look forward to finding a workplace where I can show my skills and help however I can.</p>
-                </div>
-        
-                <div class="about-photo">
-                    <img src="TU_IMAGEN_AQUI.jpg" alt="Marcio Photo">
-                </div>
-            </div>
-        </section>
+        <div class="about-wrapper">
+            <section class="card about-card">
+                <h2>About me</h2>
+                <p>I’ve always been in love with sports, especially motor sports and cars.
+                I look forward to finding a workplace where I can show my skills and help however I can.</p>
+            </section>
+            <img class="about-photo" src="TU_IMAGEN_AQUI.jpg" alt="Profile Photo">
+        </div>
 
         <section class="card">
             <h2>Skills</h2>
