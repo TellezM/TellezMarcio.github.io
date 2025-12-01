@@ -111,7 +111,7 @@
             display: flex;
             flex-direction: column;
             gap: 6px;
-            text-align: left;         /* mantiene los textos alineados */
+            text-align: left;       
         }
 
         .experience-tag h3 {
@@ -126,12 +126,28 @@
             font-size: 15px;
         }
         .about-card {
-            width: 50%;           /* ocupa la mitad de la pantalla */
-            margin-left: 0;       /* se va a la izquierda */
-            margin-right: auto;   /* evita centrado */
-            text-align: left;     /* para que no quede todo centrado */
+            width: 50%;  
+            margin-left: 0;    
+            margin-right: auto; 
+            text-align: left;   
+        }
+        .about-content {
+            display: flex;
+            align-items: center;     
+            gap: 20px;         
         }
 
+        .about-text {
+            flex: 1;           
+        }
+
+        .about-photo img {
+            width: 150px;      
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;       
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
 
     </style>
 </head>
@@ -190,13 +206,18 @@
         </section>
 
         <section class="card">
-            <h2>Experience</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About me</h2>
+                    <p>I’ve always been in love with sports, especially motor sports and cars. 
+                    I look forward to finding a workplace where I can show my skills and help however I can.</p>
+                </div>
         
-            <article class="experience-tag">
-                <h3>S&P INTERN - (MAY 2025 - PRESENT)</h3>
-                <p>DIDI - MEXICO CITY</p>
-                <p>I collect, analyze, and visualize data to help organizations make informed business decisions.</p>
-            </article>
+                <div class="about-photo">
+                    <img src="MarcioT.jpg" alt="Marcio Photo">
+                </div>
+            </div>
+        </section>
         
             <article class="experience-tag">
                 <h3>BI INTERN - (JANUARY 2025 - MAY 2025)</h3>
