@@ -37,9 +37,10 @@
             justify-content: center;
         }
 
-        .skills-grid > * {
-            width: 100%;
-            max-width: 260px; /* Hace que cada card tenga tamaño fijo */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .skill-category {
