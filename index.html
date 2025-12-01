@@ -36,20 +36,17 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
-            ajustify-content: center;
-            justify-items: center;
-            align-items: start;
+            align-items: center; 
             justify-content: center; 
         }
 
         .skill-category {
-            background: #fafafa;          /* Fondo blanco */
+            background: #fafafa;
             border-radius: 12px;
-            padding: 25px;                /* Más grande */
+            padding: 25px;
             box-shadow: 0 1px 4px rgb(243, 239, 239);
-            min-height: 220px;            /* Altura uniforme */
-            text-align: center;           /* Centra contenido */
-            
+            min-height: 220px;
+            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;          /* Centra horizontal */
@@ -69,6 +66,8 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
             transition: transform 0.3s ease; 
             display: inline-block;
+            align-items: center; 
+            text-align: center;
         }
 
         .contact {
@@ -78,11 +77,13 @@
         }
 
         .contact-item {
-            background: #fafafa;
+            background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%); 
+            color: white; 
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 1px 4px rgba(0,0,0,0.1);
             flex: 1;
+            align-items: center; 
             min-width: 200px;
         }
     </style>
