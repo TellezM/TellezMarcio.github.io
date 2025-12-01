@@ -38,14 +38,15 @@
         }
 
         .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;   /* 👈 centra siempre las filas */
         }
 
         .skill-category {
-    background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%);
-    border-radius: 12px;
+            background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%);
+            border-radius: 12px;
             padding: 20px;
             color: white;
             box-shadow: 0 1px 4px rgb(243, 239, 239);
