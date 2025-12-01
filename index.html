@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcio Tellez - My Page</title>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #04050b 0%, #190464 100%);
+            background: linear-gradient(135deg, #04050b 0%, #14044e 100%);
             min-height: 100vh;
+            padding-bottom: 40px;
         }
 
         .container {
@@ -34,261 +32,200 @@
         header h1 {
             font-size: 3.5em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: fadeInDown 1s ease;
         }
 
-        header p {
-            font-size: 1.3em;
-            opacity: 0.95;
-            animation: fadeInUp 1s ease;
-        }
+        header p { font-size: 1.3em; }
 
-        .content {
+        /* === Cards para separar secciones === */
+        .card {
             background: white;
             border-radius: 20px;
-            padding: 40px;
-            margin: 30px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            animation: fadeIn 1.2s ease;
+            padding: 35px;
+            margin: 25px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
         }
 
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
+        .section-title {
             color: #112ca7;
             font-size: 2em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #112ca7;
-        }
-
-        .section p {
-            font-size: 1.1em;
             margin-bottom: 15px;
-            text-align: justify;
+            border-bottom: 3px solid #112ca7;
+            display: inline-block;
+            padding-bottom: 5px;
         }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
+        /* === Skills === */
+        .skills-category {
+            background: #f3f4f8;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 12px 0;
+        }
+
+        .skills-category h3 {
+            margin-bottom: 12px;
+            color: #0d1c75;
         }
 
         .skill-tag {
             background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%);
             color: white;
-            padding: 10px 20px;
+            padding: 8px 18px;
             border-radius: 25px;
             font-weight: 600;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            margin: 6px;
+            display: inline-block;
         }
 
-        .skill-tag:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-        }
-
+        /* Contact boxes */
         .contact {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            margin-top: 20px;
         }
 
         .contact-item {
             flex: 1;
             min-width: 200px;
+            text-align: center;
             background: #f8f9fa;
             padding: 20px;
             border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .contact-item a {
-            color: #2645d1;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
             color: white;
-            opacity: 0.9;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            .content {
-                padding: 25px;
-            }
-
-            .section h2 {
-                font-size: 1.5em;
-            }
+            margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Marcio Tellez</h1>
-            <p>Welcome to My_Page</p>
-        </header>
 
-        <!-- ABOUT ME -->
-        <section class="card">
-            <h2>About me</h2>
-            <p>I’ve always been in love with sports, especially motor sports and cars. I look forward to finding a workplace where I can show my skills and help however I can.</p>
-        </section>
+<div class="container">
 
-        <!-- SKILLS with categories -->
-        <section class="card">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">C#</span>
-                </div>
+    <header>
+        <h1>Marcio Tellez</h1>
+        <p>Welcome to My_Page</p>
+    </header>
 
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">Cassandra</span>
-                </div>
+    <!-- ABOUT -->
+    <section class="card">
+        <h2 class="section-title">About me</h2>
+        <p>
+            I´ve always been in love with sports, especially motor sports and cars. 
+            I look forward to finding a workplace where I can show my skills and help however I can.
+        </p>
+    </section>
 
-                <div class="skill-category">
-                    <h3>Data & Tools</h3>
-                    <span class="skill-tag">Pyspark</span>
-                    <span class="skill-tag">Excel</span>
-                    <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">Docker</span>
-                </div>
+    <!-- SKILLS -->
+    <section class="card">
+        <h2 class="section-title">Skills</h2>
 
-                <div class="skill-category">
-                    <h3>Software</h3>
-                    <span class="skill-tag">Unity</span>
-                    <span class="skill-tag">Visual Studio</span>
-                </div>
+        <div class="skills-category">
+            <h3>Programming Languages</h3>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">HTML</span>
+        </div>
 
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <span class="skill-tag">English</span>
-                    <span class="skill-tag">Spanish</span>
-                    <span class="skill-tag">German</span>
-                    <span class="skill-tag">Italian</span>
-                </div>
+        <div class="skills-category">
+            <h3>Databases</h3>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Cassandra</span>
+        </div>
+
+        <div class="skills-category">
+            <h3>Data Tools</h3>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">PySpark</span>
+            <span class="skill-tag">Excel</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">GitHub</span>
+        </div>
+
+        <div class="skills-category">
+            <h3>Software</h3>
+            <span class="skill-tag">Unity</span>
+            <span class="skill-tag">Visual Studio</span>
+        </div>
+
+        <div class="skills-category">
+            <h3>Languages</h3>
+            <span class="skill-tag">Spanish</span>
+            <span class="skill-tag">English</span>
+            <span class="skill-tag">German</span>
+            <span class="skill-tag">Italian</span>
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="card">
+        <h2 class="section-title">Experience</h2>
+
+        <article>
+            <h3>S&P INTERN (MAY 2025 - PRESENT)</h3>
+            <p>DIDI - Mexico City</p>
+            <p>I collect, analyze, and visualize data to help organizations make informed business decisions.</p>
+        </article>
+
+        <article>
+            <h3>BI INTERN (JAN 2025 - MAY 2025)</h3>
+            <p>DIDI - Mexico City</p>
+            <p>I collect, analyze, and visualize data to help organizations make informed business decisions.</p>
+        </article>
+
+        <article>
+            <h3>HULT PRIZE NATIONALS (OCT 2024 - MAY 2025)</h3>
+            <p>Monterrey, Mexico</p>
+            <p>Developed and pitched a socially impactful business idea addressing a global challenge.</p>
+        </article>
+
+        <article>
+            <h3>PEDAGOGICAL ACTIVITIES PROGRAMMER (2024)</h3>
+            <p>TERA - Mexico City</p>
+            <p>Designed Unity-based learning activities for children ages 6 to 12.</p>
+        </article>
+
+        <article>
+            <h3>MECHANIC & DESIGNER (2023 - 2024)</h3>
+            <p>Colmillos Racing Team - Mexico City</p>
+            <p>Worked on the mechanics and design of the car.</p>
+        </article>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="card">
+        <h2 class="section-title">Contacto</h2>
+
+        <div class="contact">
+            <div class="contact-item">
+                <strong>GitHub</strong><br>
+                <a href="https://github.com/TellezM" target="_blank">@TellezM</a>
             </div>
-        </section>
 
-        <!-- EXPERIENCE -->
-        <section class="card">
-            <h2>Experience</h2>
-            <article>
-                <h3>S&P INTERN - (MAY 2025 - PRESENT)</h3>
-                <p>DIDI - MEXICO CITY</p>
-                <p>I collect, analyze, and visualize data to help organizations make informed business decisions.</p>
-            </article>
-            <article>
-                <h3>BI INTERN - (JANUARY 2025 - MAY 2025)</h3>
-                <p>DIDI - MEXICO CITY</p>
-                <p>I collect, analyze, and visualize data to help organizations make informed business decisions.</p>
-            </article>
-            <article>
-                <h3>HULT PRIZE NATIONALS - (OCTOBER 2024 - MAY 2025)</h3>
-                <p>HULT PRIZE - MONTERREY, MEXICO</p>
-                <p>I was developing and pitching an innovative, socially impactful business idea.</p>
-            </article>
-            <article>
-                <h3>PEDAGOGICAL ACTIVITIES PROGRAMMER - (JANUARY 2024 - DECEMBER 2024)</h3>
-                <p>TERA - MEXICO CITY</p>
-                <p>Designed and developed Unity-based computer activities for children aged 6–12.</p>
-            </article>
-            <article>
-                <h3>MECHANIC AND DESIGNER - (SEPTEMBER 2023 - DECEMBER 2024)</h3>
-                <p>COLMILLOS RACING TEAM - MEXICO CITY</p>
-                <p>Worked on the mechanics and design of the car.</p>
-            </article>
-        </section>
-
-        <!-- CONTACT -->
-        <section class="card">
-            <h2>Contact</h2>
-            <div class="contact">
-                <div class="contact-item">
-                    <strong>GitHub</strong><br>
-                    <a href="https://github.com/TellezM" target="_blank">@TellezM</a>
-                </div>
-                <div class="contact-item">
-                    <strong>Email</strong><br>
-                    <a href="mailto:marciotellezro@gmail.com">Marcio Tellez</a>
-                </div>
-                <div class="contact-item">
-                    <strong>LinkedIn</strong><br>
-                    <a href="https://www.linkedin.com/in/marcio-tellez-606a36255/" target="_blank">Marcio Tellez</a>
-                </div>
+            <div class="contact-item">
+                <strong>Email</strong><br>
+                <a href="mailto:marciotellezro@gmail.com">Marcio Tellez</a>
             </div>
-        </section>
 
-        <footer>
-            <p>&copy; 2024 Marcio Tellez. Todos los derechos reservados.</p>
-        </footer>
-    </div>
+            <div class="contact-item">
+                <strong>LinkedIn</strong><br>
+                <a href="https://www.linkedin.com/in/marcio-tellez-606a36255/" target="_blank">Marcio Tellez</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Marcio Tellez. Todos los derechos reservados.</p>
+    </footer>
+
+</div>
 </body>
 </html>
-
