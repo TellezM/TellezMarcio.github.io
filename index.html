@@ -206,7 +206,7 @@
             font-size: 3.5rem;
             font-weight: 800;
             letter-spacing: -0.03em;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             color: var(--text-primary);
             text-shadow: 0 2px 20px var(--accent-glow);
             position: relative;
@@ -220,6 +220,42 @@
             font-style: italic;
             position: relative;
             z-index: 1;
+            margin-bottom: 0;
+        }
+        
+        header p.subtitle {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            font-style: normal;
+            margin-bottom: 24px;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            padding: 10px 24px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            background: rgba(91, 155, 213, 0.12);
+            border: 1px solid rgba(91, 155, 213, 0.25);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+            margin-top: 28px;
+        }
+        
+        .contact-btn:hover {
+            background: rgba(91, 155, 213, 0.2);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(91, 155, 213, 0.15);
+        }
+        
+        html {
+            scroll-behavior: smooth;
         }
 
         .card {
@@ -825,7 +861,9 @@
         <div class="container">
         <header>
             <h1>Marcio Tellez</h1>
+            <p class="subtitle">Engineering and Data Science Student</p>
             <p>People aren't happy because they win, they win because thay are happy</p>
+            <a href="#contact" class="contact-btn">Contact Me</a>
         </header>
 
         <div class="about-wrapper">
@@ -978,7 +1016,7 @@
             </article>
         </section>
 
-        <section class="card">
+        <section class="card" id="contact">
             <h2>Contact</h2>
             <div class="contact">
                 <div class="contact-item">
