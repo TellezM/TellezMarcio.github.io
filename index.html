@@ -4,251 +4,387 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marcio Tellez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
-            background: linear-gradient(135deg, #04050b 0%, #14044e 100%); 
-            min-height: 100vh; padding-bottom: 40px; 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            line-height: 1.7; 
+            color: #1a1a1a; 
+            background: #f8f9fa;
+            min-height: 100vh;
+            padding-bottom: 60px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+        
         .container {
-            width: 80%;
-            margin: auto;
-            padding-top: 20px;
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 60px;
         }
+        
         header { 
             text-align: center; 
-            padding: 40px 20px; 
-            color: white; 
+            padding: 80px 20px 60px; 
+            color: #1a1a1a;
+            margin-bottom: 40px;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            color: #000000;
+        }
+        
+        header p {
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: #666666;
+            font-style: italic;
         }
 
         .card {
-            background-color: white;
-            text-align: center;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+            padding: 48px 40px;
+            margin: 0 0 60px 0;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
         }
-        .skills-grid {
-            display: grid;
-            text-align: center;
-            grid-template-columns: repeat(auto-fit, minmax(260px, max-content));
-            gap: 25px;
-            justify-content: center;
+        
+        .card h2 {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 32px;
+            text-align: left;
+            letter-spacing: -0.01em;
         }
-
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;  
+            gap: 24px;
+            justify-content: flex-start;
         }
-        .about-box {
-            width: 50%;
-            margin: auto;
-            }
 
         .skill-category {
-            background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%);
-            border-radius: 12px;
-            padding: 20px;
-            color: white;
-            box-shadow: 0 1px 4px rgb(243, 239, 239);
-            
-            width: 260px;   /* 👈 ajusta este valor para controlar cuántas caben */
-            
-            text-align: center;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 28px 24px;
+            width: 280px;
+            text-align: left;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 12px;
+            gap: 16px;
+            transition: box-shadow 0.2s ease;
         }
+        
+        .skill-category:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
         .skill-category h3 {
-            margin-bottom: 10px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 4px;
+            letter-spacing: -0.01em;
         }
 
         .skill-tag { 
-            background: #fafafa; 
-            color: rgb(7, 7, 7); 
-            padding: 10px 20px; 
-            border-radius: 25px; 
-            font-weight: 600; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-            transition: transform 0.3s ease; 
+            background: #f3f4f6; 
+            color: #374151; 
+            padding: 8px 16px; 
+            border-radius: 4px; 
+            font-weight: 500;
+            font-size: 0.875rem;
             display: inline-block;
-            align-items: center; 
-            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: background-color 0.2s ease;
+        }
+        
+        .skill-tag:hover {
+            background: #e5e7eb;
         }
 
         .contact {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            align-items: center; 
-            text-align: center;
         }
 
         .contact-item {
-            background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%); 
-            color: white; 
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-            align-items: center; 
-            text-align: center;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            color: #1a1a1a; 
+            padding: 24px;
+            border-radius: 6px;
+            text-align: left;
+            transition: box-shadow 0.2s ease;
         }
+        
+        .contact-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .contact-item strong {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+        
         .contact-item a {
-            color: #26C6DA;
+            color: #2563eb;
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
         }
+        
         .contact-item a:hover {
-            color: #4ECDC4;
+            color: #1d4ed8;
             text-decoration: underline;
         }
+        
         .experience-tag {
-            background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%);
-            color: white;
-            padding: 18px 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-            margin-bottom: 18px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            color: #1a1a1a;
+            padding: 28px;
+            border-radius: 6px;
+            margin-bottom: 20px;
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 12px;
             text-align: left;
             position: relative;
+            transition: box-shadow 0.2s ease;
+        }
+        
+        .experience-tag:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         .experience-tag .company-logo {
-            width: 40px;
-            height: 40px;
+            width: 48px;
+            height: 48px;
             object-fit: contain;
             position: absolute;
-            top: 18px;
-            right: 25px;
-            border-radius: 5px;
-            background: white;
-            padding: 3px;
+            top: 28px;
+            right: 28px;
+            border-radius: 4px;
+            background: #f9fafb;
+            padding: 6px;
+            border: 1px solid #e5e7eb;
         }
 
         .experience-tag h3 {
             margin: 0;
-            font-size: 18px;
-            font-weight: 700;
-            padding-right: 50px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            padding-right: 70px;
+            color: #000000;
+            letter-spacing: -0.01em;
+            line-height: 1.4;
         }
 
         .experience-tag p {
             margin: 0;
-            opacity: 0.9;
-            font-size: 15px;
+            color: #6b7280;
+            font-size: 0.9375rem;
+            line-height: 1.6;
         }
+        
+        .experience-tag p:first-of-type {
+            color: #374151;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        
         .project-tag {
-            background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%);
-            color: white;
-            padding: 18px 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-            margin-bottom: 18px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            color: #1a1a1a;
+            padding: 28px;
+            border-radius: 6px;
+            margin-bottom: 20px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 16px;
             text-align: left;
+            transition: box-shadow 0.2s ease;
         }
-        .project-tag h3 {
+        
+        .project-tag:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .project-tag h3,
+        .project-tag h4 {
             margin: 0;
-            font-size: 18px;
-            font-weight: 700;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #000000;
+            letter-spacing: -0.01em;
+            line-height: 1.3;
         }
+        
         .project-tag p {
             margin: 0;
-            opacity: 0.9;
-            font-size: 15px;
+            color: #4b5563;
+            font-size: 0.9375rem;
+            line-height: 1.7;
         }
-        .project-tag a {
-            color: #26C6DA;
-            text-decoration: none;
+        
+        .project-tag ul {
+            margin: 8px 0;
+            padding-left: 24px;
+            color: #4b5563;
+            font-size: 0.9375rem;
+            line-height: 1.8;
+        }
+        
+        .project-tag ul li {
+            margin-bottom: 8px;
+        }
+        
+        .project-tag ul li strong {
+            color: #1a1a1a;
             font-weight: 600;
+        }
+        
+        .project-tag a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9375rem;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
+            margin-top: 4px;
+            transition: color 0.2s ease;
         }
+        
         .project-tag a:hover {
-            color: #4ECDC4;
+            color: #1d4ed8;
             text-decoration: underline;
         }
         footer {
             text-align: center;
-            color: #ffffff;
-            padding: 20px 0;
-            margin-top: 40px;
+            color: #6b7280;
+            padding: 40px 0;
+            margin-top: 60px;
+            font-size: 0.875rem;
         }
+        
         .about-wrapper {
             display: flex;
-            align-items: center; 
-            gap: 30px;       
+            align-items: flex-start; 
+            gap: 40px;       
             width: 100%;
-            justify-content: flex-start;
-            text-align: center;
         }
 
         .about-card {
-            width: 65%; 
-            margin-bottom: 5px;
-            margin: 5px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            flex: 1;
         }
+        
         .about-card h2 {
-            margin: 3px 0;  
+            margin-bottom: 32px;
+            text-align: left;
         }
+        
         .section-title {
-            font-size: 1.8rem;  
-            margin-bottom: 25px;
-            text-align: center;
+            font-size: 1.875rem;  
+            font-weight: 600;
+            margin-bottom: 32px;
+            text-align: left;
+            color: #000000;
+            letter-spacing: -0.01em;
         }
 
         .about-photo {
-            width: 250px;  
-            height: 360px;
+            width: 280px;
+            height: auto;
+            max-height: 400px;
             object-fit: cover; 
-            border-radius: 10px; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border-radius: 6px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            flex-shrink: 0;
         }
+        
         .about-tag {
-            background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%); /* mismo gradiente */
-            color: white;
-            display: inline-block;
-            padding: 12px 18px;    
-            border-radius: 20px;      
-            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-            max-width: 760px;        
-            margin-top: 12px;     
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            color: #4b5563;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+            max-width: 100%;
+            margin: 0;
+            line-height: 1.7;
+        }
+        
+        .about-tag p {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #4b5563;
+            line-height: 1.8;
+            margin: 0;
         }
 
-        .about-tag {
-            background: linear-gradient(135deg, #04050b 0%, #2e09b7 100%);
-            color: white;
-            padding: 25px 30px;      
-            border-radius: 20px;
-            font-size: 18px;          
-            font-weight: 500;
-            max-width: 800px;       
-            margin: 20px auto;      
-            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-            line-height: 1.6;
-        }
-
-        @media (max-width: 600px) {
-            .about-tag {
-                display: block;
-                width: 100%;
-                padding: 10px 14px;
-                border-radius: 12px; 
+        @media (max-width: 768px) {
+            .about-wrapper {
+                flex-direction: column;
+                align-items: center;
             }
-            .about-tag p { font-size: 14px; }
+            
+            .about-photo {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .about-card {
+                width: 100%;
+            }
+            
+            .skills-grid {
+                justify-content: center;
+            }
+            
+            .skill-category {
+                width: 100%;
+                max-width: 320px;
+            }
+            
+            header h1 {
+                font-size: 2.25rem;
+            }
+            
+            .container {
+                width: 95%;
+                padding-top: 40px;
+            }
+            
+            .card {
+                padding: 32px 24px;
+                margin-bottom: 40px;
+            }
         }
 
 
@@ -436,7 +572,7 @@
                 </ul>
                 <a href="https://github.com/TERAlabTECH/TERATech" target="_blank">View Repository</a>
             </article>
-            <article class="project-tag">
+            <article class="project-tag">S
                 <h3>Calculator</h3>
                 <p>
                     Built a fully functional desktop calculator in Java, applying object-oriented design to structure arithmetic operations, state handling, and the Swing-based user interface.
